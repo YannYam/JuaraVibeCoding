@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+classvault.db
+classvault.db-wal
+classvault.db-shm
+uploads/*
+.git
+.gitignore
+Dockerfile
+.dockerignore

@@ -1,0 +1,19 @@
+# Dependencies
+app_build/node_modules/
+
+# Database
+app_build/classvault.db
+app_build/classvault.db-wal
+app_build/classvault.db-shm
+
+# Uploads
+app_build/uploads/*
+!app_build/uploads/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
