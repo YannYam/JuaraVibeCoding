@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClassVault — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="dashboard.html" class="nav-brand">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
+        <span>ClassVault</span>
+      </a>
+      <div class="nav-actions">
+        <span class="role-badge" id="roleBadge"></span>
+        <span class="user-greeting" id="userGreeting"></span>
+        <button class="btn-logout" id="logoutBtn" title="Sign out">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          <span>Logout</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <main id="mainContent">
+    <div id="homeView">
+      <section class="hero">
+        <div class="hero-content">
+          <span class="hero-badge">Spring 2026</span>
+          <h1>Guest Lecture Series</h1>
+          <p>A curated series of expert-led sessions covering diverse topics in technology and innovation.</p>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-card"><span class="stat-number" id="statSessions">7</span><span class="stat-label">Sessions</span></div>
+          <div class="stat-card"><span class="stat-number" id="statFiles">0</span><span class="stat-label">Files</span></div>
+          <div class="stat-card"><span class="stat-number" id="statSpeakers">7</span><span class="stat-label">Speakers</span></div>
+        </div>
+      </section>
+      <section class="search-section">
+        <div class="search-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="searchInput" placeholder="Search by topic or speaker name...">
+        </div>
+      </section>
+      <section class="sessions-section">
+        <h2 class="section-title">All Sessions</h2>
+        <div class="session-grid" id="sessionGrid"></div>
+        <div id="noResults" class="no-results hidden">
+          <p>No sessions found matching your search.</p>
+        </div>
+      </section>
+    </div>
+    <div id="sessionDetailView" class="hidden"></div>
+  </main>
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
